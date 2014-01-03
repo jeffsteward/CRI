@@ -1,4 +1,4 @@
 CRI
 ===
 
-Just another website
+Just another website built with Bootstrap
