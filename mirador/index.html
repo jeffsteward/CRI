@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello! I'm Mirador 3️⃣</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the Mirador 3️⃣ -->
+    <script src="https://unpkg.com/mirador@alpha/dist/mirador.min.js"></script>
+  </head>  
+  <body>   
+    <div id="mirador"></div>
+    <script type="text/javascript">
+      const mirador = Mirador.viewer({
+        id: "mirador",
+        // All of the settings (with descriptions (ﾉ^∇^)ﾉﾟ) located here:
+        // https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
+        // language: 'en', // The default language set in the application
+        // availableLanguages: { // All the languages available in the language switcher
+        //   de: 'Deutsch',
+        //   en: 'English',
+        //   fr: 'Français',
+        //   ja: '日本語',
+        //   'zh-CN': '中文(简体)',
+        //   'zh-TW': '中文(繁體)',
+        // },
+        // displayAllAnnotations: false, // Configure if annotations to be displayed on the canvas by default when fetched
+        // resourceHeaders: {}, // Headers to send with IIIF Presentation API resource requests
+        // translations: { // Translations can be added to inject new languages or override existing labels
+        // },
+        window: {
+          allowClose: false, // Configure if windows can be closed or not
+          allowFullscreen: false, // Configure to show a "fullscreen" button in the WindowTopBar
+          allowMaximize: false, // Configure if windows can be maximized or not
+          authNewWindowCenter: 'parent', // Configure how to center a new window created by the authentication flow. Options: parent, screen
+          defaultSideBarPanel: 'info', // Configure which sidebar is selected by default. Options: info, attribution, canvas, annotations
+          defaultView: 'single',  // Configure which viewing mode (e.g. single, book, gallery) for windows to be opened in
+          hideAnnotationsPanel: true, // Configure to hide the annotations panel in the WindowSideBarButtons
+          hideSearchPanel: true, // Configure to hide search panel in the WindowSideBarButtons
+          hideWindowTitle: false, // Configure if the window title is shown in the window title bar or not
+          sideBarOpenByDefault: true, // Configure if the sidebar (and its content panel) is open by default
+        },
+        // windows: [], // Array of windows to be open when mirador initializes (each object should at least provide a loadedManifest key with the value of the IIIF presentation manifest to load)
+        // thumbnailNavigation: {
+        //   defaultPosition: 'off', // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
+        //   height: 130, // height of entire ThumbnailNavigation area when position is "far-bottom"
+        //   width: 100, // width of one canvas (doubled for book view) in ThumbnailNavigation area when position is "far-right"
+        // },
+        workspace: {
+          showZoomControls: false, // Configure if zoom controls should be displayed by default
+          type: 'mosaic', // Which workspace type to load by default. Other possible values are "elastic"
+        },
+        workspaceControlPanel: {
+          enabled: false, // Configure if the control panel should be rendered.  Useful if you want to lock the viewer down to only the configured manifests
+        },
+        themes: {
+            bold: {
+                palette: {
+                    type: 'light',
+                    primary: {
+                        main: '#ff00ff'
+                    },
+                    secondary: {
+                        main: "#00ff00"
+                    }
+                }
+            }
+        },
+        selectedTheme: 'bold',
+      });
+      // All of the settings (with descriptions (ﾉ^∇^)ﾉﾟ) located here:
+      // https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
+
+      let languages = Object.keys(mirador.store.getState().config.availableLanguages);
+      let currentLanguage = 0;
+
+      let manifestIds = [
+        "https://iiif.harvardartmuseums.org/manifests/object/6772",
+        "https://iiif.harvardartmuseums.org/manifests/object/230119",
+        "https://iiif.harvardartmuseums.org/manifests/object/168614",
+      ];
+      currentManifestIndex = 0;
+
+      let currentIntervalIndex;
+
+      function changeLanguage() {
+        mirador.store.dispatch(
+            mirador.actions.updateConfig({
+                language: languages[currentLanguage]
+            })
+        );
+        currentLanguage +=1;
+        if (currentLanguage >= languages.length) {
+            currentLanguage = 0;
+            clearInterval(currentIntervalIndex);
+            currentIntervalIndex = setInterval(makeWindow, 2000);
+        }
+      }
+
+      function makeWindow() {
+        mirador.store.dispatch(
+            mirador.actions.addWindow({
+                manifestId: manifestIds[currentManifestIndex],
+            })
+        );         
+
+        currentManifestIndex += 1;
+        if (currentManifestIndex >= manifestIds.length) {
+            clearInterval(currentIntervalIndex);
+            currentIntervalIndex = setInterval(changeLayout, 1000);
+        }
+      }
+
+      function changeLayout() {
+            mirador.store.dispatch(
+                    mirador.actions.updateConfig({
+                        workspace: {
+                            type: 'elastic'
+                        }
+                    })
+            );
+            
+            clearInterval(currentIntervalIndex);
+            arrangeWindows();
+      }
+
+      function changeTheme() {
+          mirador.store.dispatch(
+              mirador.actions.updateConfig({
+                selectedTheme: 'light'
+              })
+          );
+      }
+
+      function arrangeWindows() {
+        let windows = Object.keys(mirador.store.getState().elasticLayout);
+
+        windows.forEach(w => {
+            let xPos = Math.round(Math.floor(Math.random()*((window.innerWidth-200)-0+1)+0));
+            let yPos = Math.round(Math.floor(Math.random()*((window.innerHeight-200)-0+1)+0));
+
+            mirador.store.dispatch(
+                mirador.actions.updateElasticWindowLayout(w, {x:xPos, y:yPos})
+            );            
+        });
+
+        currentInterval = setInterval(deleteWindows, 2000);
+      }
+
+      function deleteWindows() {
+        let windows = Object.keys(mirador.store.getState().elasticLayout);
+
+        if (windows.length > 0) {
+            let w = mirador.store.getState().elasticLayout[windows[0]];
+            mirador.store.dispatch(
+                mirador.actions.removeWindow(w.windowId)
+            );
+        } else {
+            clearInterval(currentIntervalIndex);
+            restoreUi();
+        }
+      }
+
+      function restoreUi() {
+            mirador.store.dispatch(
+                mirador.actions.updateConfig({
+                    language: 'en',
+                    window: {
+                        allowClose: true, // Configure if windows can be closed or not
+                        allowFullscreen: true, // Configure to show a "fullscreen" button in the WindowTopBar
+                        allowMaximize: true, // Configure if windows can be maximized or not
+                        defaultView: 'single',  // Configure which viewing mode (e.g. single, book, gallery) for windows to be opened in
+                        hideAnnotationsPanel: false, // Configure to hide the annotations panel in the WindowSideBarButtons
+                        sideBarOpenByDefault: false, // Configure if the sidebar (and its content panel) is open by default
+                    },
+                    workspaceControlPanel: {
+                        enabled: true, // Configure if the control panel should be rendered.  Useful if you want to lock the viewer down to only the configured manifests
+                    },
+                    workspace: {
+                            type: 'mosaic'
+                        }
+                })
+            );
+      }
+
+      currentIntervalIndex = setInterval(changeLanguage, 1000);
+    </script>
+  </body>
+</html>
