@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- import the Mirador 3️⃣ -->
-    <script src="https://unpkg.com/mirador@alpha/dist/mirador.min.js"></script>
+    <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
   </head>  
   <body>   
     <div id="mirador"></div>
@@ -71,7 +71,7 @@
 
       function changeLanguage() {
         mirador.store.dispatch(
-            mirador.actions.updateConfig({
+            Mirador.actions.updateConfig({
                 language: languages[currentLanguage]
             })
         );
@@ -85,7 +85,7 @@
 
       function makeWindow() {
         mirador.store.dispatch(
-            mirador.actions.addWindow({
+            Mirador.actions.addWindow({
                 manifestId: manifestIds[currentManifestIndex],
             })
         );         
@@ -99,7 +99,7 @@
 
       function changeLayout() {
             mirador.store.dispatch(
-                    mirador.actions.updateConfig({
+                    Mirador.actions.updateConfig({
                         workspace: {
                             type: 'elastic'
                         }
@@ -112,7 +112,7 @@
 
       function changeTheme() {
           mirador.store.dispatch(
-              mirador.actions.updateConfig({
+              Mirador.actions.updateConfig({
                 selectedTheme: 'light'
               })
           );
@@ -126,7 +126,7 @@
             let yPos = Math.round(Math.floor(Math.random()*((window.innerHeight-200)-0+1)+0));
 
             mirador.store.dispatch(
-                mirador.actions.updateElasticWindowLayout(w, {x:xPos, y:yPos})
+                Mirador.actions.updateElasticWindowLayout(w, {x:xPos, y:yPos})
             );            
         });
 
@@ -139,7 +139,7 @@
         if (windows.length > 0) {
             let w = mirador.store.getState().elasticLayout[windows[0]];
             mirador.store.dispatch(
-                mirador.actions.removeWindow(w.windowId)
+                Mirador.actions.removeWindow(w.windowId)
             );
         } else {
             clearInterval(currentIntervalIndex);
@@ -149,7 +149,7 @@
 
       function restoreUi() {
             mirador.store.dispatch(
-                mirador.actions.updateConfig({
+                Mirador.actions.updateConfig({
                     language: 'en',
                     window: {
                         allowClose: true, // Configure if windows can be closed or not
