@@ -66,7 +66,8 @@ title: Home
 					<h4 class="media-heading">{{ talk.title }}</h4>
 				</div>
 			</a>
-			{{ talk.date | | date: "%B %d, %Y"}} ({{talk.url_type}})
+			{{ talk.date | | date: "%B %d, %Y"}} during {{ talk.event }}<br/>
+			({{talk.url_type}}, {{talk.duration}})<br/>
 		</li>
 		{% endfor %}
 	</ul>

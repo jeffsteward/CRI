@@ -2,48 +2,62 @@
   description:
   url: https://harvardartmuseums.org/article/1036/
   url_type: "transcript and slides"
+  event: "Fantastic Futures (AI4LAM) Annual Conference 2023"
   date: 2023-11-17
+  duration: "10 minute read"
 
 - title: "The HAM API: 10 Years and Counting"
   description:
   url: https://harvardartmuseums.org/article/1035/
   url_type: "transcript and slides"
+  event: "MCN Annual Conference 2023"
   date: 2023-11-10
+  duration: "9 minute read"
 
 - title: "Elephants on Parade or: A Cavalcade of Discoveries from Five CV Systems"
   description:
   url: https://www.youtube.com/watch?v=1smG2aGZImY
   url_type: video
+  event: "AEOLIAN workshop 'Reimagining Industry / Academic / Cultural Heritage Partnerships in AI'"
   date: 2021-10-25
+  duration: "34 minutes"
 
 - title: "Gaming the Museum: Art Talk with Jeff Steward"
   description:
   url: https://youtu.be/n6zBmhvshZw?si=97gEAANIAkKVvPYu
   url_type: video
+  event: "Harvard Art Museums Art Talks Live!"
   date: 2021-10-19
+  duration: "34 minutes"
 
 - title: "Dreaming about Collections Management Systems for the 21st Century"
   description:
   url: https://www.linkedin.com/pulse/dreaming-collections-management-systems-21st-century-jeff-steward
   url_type: transcript 
+  event: "Episode 2 of Balboa Park Online Collaborative's Dreaming of a New Collections Management System Webinar Series"
   date: 2021-01-20
+  duration: "5 minutes"
 
 - title: "Hacking Art with IIIF"
   description:
   url: https://www.youtube.com/watch?v=-od9S8kn5b8
   url_type: video
+  event: "IIIF Showcase during the IIIF Annual Conference 2019"
   date: 2019-06-14
+  duration: "8 minutes"
 
 - title: "Fun and Games with Machine Processing and IIIF"
   description:
   url: https://www.youtube.com/watch?v=omfFknJQEEA
   url_type: video
+  event: "IIIF Showcase during the IIIF Annual Conference 2017"
   date: 2017-06-06
-  duration: 12m
+  duration: "12 minutes"
 
 - title: "Exploratory Data Visualization of Collections"
   description:
   url: https://www.youtube.com/watch?v=jAcOeiRorVM
   url_type: video
+  event: "sIGHTLines: obJECT"
   date: 2015-12-03
-  duration: 15m
+  duration: "15 minutes"
