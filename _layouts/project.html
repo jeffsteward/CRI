@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+{% include head.html %}   
+</head>
+<body>
+	<div class="container p-4">
+        <header class="pb-4">
+            <a href="/">👈 go back home</a> 
+        </header>
+
+        <h1>{{ page.title }}</h1>
+        <p class="lead">{{ page.description }}<br/>{{ page.dates | date: "%B %d, %Y"}}</p>
+        <hr>
+        {{ content }}
+    </div>
+</body>
+</html>

@@ -1,71 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Cardboard Robotics</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="/images/satellite.png"> 
+---
+layout: default
+title: Home
+---
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<style type="text/css">
-		.container {max-width: 600px;}
-		.icon {width: 24px;height: 24px;}
-	</style>
-</head>
-<body class="p-4">
-	<div class="container">
-		<header>
-			<img src="images/satellite.png" class="rounded mx-auto d-block img-fluid" title="Our satellites are monitoring all transmissons." alt="A drawing of a communications satellite.">
-		</header>
-		
-		<section>
-			<p class="lead">
-				Go forth&hellip;
-			</p>
-			<ul class="list-unstyled">
-				<li>
-					<a href="https://www.whatisjeffbaking.com/">
-						<div class="media-body">
-							<h4 class="media-heading">What is Jeff Baking?</h4>
-						</div>
-					</a>
-				</li>
-  				<li>
-  					<a href="https://www.museumofthemodernsnowglobe.com/">
-	  					<div class="media-body">
-	      					<h4 class="media-heading">Museum of the Modern Snowglobe</h4>
-					    </div>
-					</a>
-  				</li>
-  				<li>
-					<a href="https://mockyachtrock.boats/">
-						<div class="media-body">
-							<h4 class="media-heading">Mock Yacht Rock</h4>
-					  </div>
-				  </a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/jeffsteward/">
-						<div class="media-body">
-							<h4 class="media-heading">Identify</h4>
-					  </div>
-				  </a>
-				</li>				
-			</ul>
-			<p>
-				<a href="https://github.com/jeffsteward"><img class="icon me-2" src="images/github-mark.svg"></a>
-				<a href="mailto:jeff@cardboardrobotics.com"><img class="icon" src="images/envelope.svg"></a>
-			</p>
-		</section>
+<header>
+	<img src="/assets/images/satellite.png" class="rounded mx-auto d-block img-fluid" title="Our satellites are monitoring all transmissons." alt="A grayscale drawing of a communications satellite">
+</header>
 
-	</div>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<section class="mb-4">
+	<p class="h3">
+		Go forth into the ether&hellip;
+	</p>
+	<ul class="list-unstyled ps-4">
+		<li>
+			<a href="https://www.whatisjeffbaking.com/">
+				<div class="media-body">
+					<h4 class="media-heading">What is Jeff Baking?</h4>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="https://www.museumofthemodernsnowglobe.com/">
+				<div class="media-body">
+					<h4 class="media-heading">Museum of the Modern Snowglobe</h4>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="https://mockyachtrock.boats/">
+				<div class="media-body">
+					<h4 class="media-heading">Mock Yacht Rock</h4>
+				</div>
+			</a>
+		</li>			
+	</ul>
+</section>
 
-	  ga('create', 'UA-6910453-1', 'cardboardrobotics.com');
-	  ga('send', 'pageview');
-	</script>
-</body>
-</html>
+<section class="mb-4">
+	<p class="h3">
+		Projects&hellip;
+	</p>
+	<ul class="list-unstyled ps-4"> 
+		{% for project in site.projects %}
+		<li>
+			<a href="{{project.url}}">
+				<div class="media-body">
+					<h4 class="media-heading">{{ project.title }}</h4>
+				</div>
+			</a>
+			<!-- {{ project.description }} -->
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+
+<section class="mb-4">
+	<p class="h3">
+		Talks&hellip;
+	</p>
+	<ul class="list-unstyled ps-4">
+		{% for talk in site.data.talks %}
+		<li class="mb-3">
+			<a href="{{ talk.url }}">
+				<div class="media-body">
+					<h4 class="media-heading">{{ talk.title }}</h4>
+				</div>
+			</a>
+			{{ talk.date | | date: "%B %d, %Y"}} ({{talk.url_type}})
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+
+<section>
+	<p class="h3">
+		Connect&hellip;
+	</p>			
+	<p class="ps-4">
+		<a href="https://github.com/jeffsteward"><img class="icon me-2" src="/assets/images/github-mark.svg"></a>
+		<a href="https://www.linkedin.com/in/jeffsteward/"><img class="icon me-2" src="/assets/images/linkedin.svg"></a>
+		<a href="mailto:jeff@cardboardrobotics.com"><img class="icon me-2" src="/assets/images/envelope.svg"></a>
+	</p>
+</section>
