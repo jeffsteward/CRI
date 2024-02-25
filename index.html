@@ -7,21 +7,21 @@ title: Home
 	<img src="/assets/images/satellite.png" class="rounded mx-auto d-block img-fluid" title="Our satellites are monitoring all transmissons." alt="A grayscale drawing of a communications satellite">
 </header>
 
-<section class="mb-4 pb-1">
-	<p class="h3">
-		About &#8628;
-	</p>
+<details open class="mb-4 pb-1">
+	<summary class="h3">
+		About
+	</summary>
 	<div class="ps-4">
 		<p>Hello. I'm <a href="https://www.linkedin.com/in/jeffsteward/" target="_blank">Jeff</a>. I make websites. I write software. I visualize data. I dream of fantastic futures, then attempt to build them.</p>
 		<p>I try to make these things fun, enjoyable, and thought-provoking. Sometimes I build physical interfaces to make interacting with data tangible and a bit more special.</p>
 		<p>Every once in a while I get to talk about my work at conferences and such.</p>
 	</div>
-</section>
+</details>
 
-<section class="mb-4 pb-1">
-	<p class="h3">
-		Connect &#8628;
-	</p>			
+<details open class="mb-4 pb-1">
+	<summary class="h3">
+		Connect
+	</summary>			
 	<ul class="list-unstyled ps-4">
 		<li class="mb-3">
 			<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"><img class="icon me-3" src="/assets/images/linkedin.svg" alt="Link to LinkedIn account">linkedin.com/in/{{ site.linkedin_username }}</a>
@@ -33,12 +33,12 @@ title: Home
 			<a href="mailto:{{ site.email }}"><img class="icon me-3" src="/assets/images/envelope.svg" alt="Link to email address">{{ site.email }}</a>
 		</li>
 	</ul>
-</section>
+</details>
 
-<section class="mb-4 pb-1">
-	<p class="h3">
-		Websites &#8628;
-	</p>
+<details open class="mb-4 pb-1">
+	<summary class="h3">
+		Websites
+	</summary>
 	<ul class="list-unstyled ps-4">
 		<li>
 			<a href="https://www.whatisjeffbaking.com/">
@@ -62,12 +62,12 @@ title: Home
 			</a>
 		</li>			
 	</ul>
-</section>
+</details>
 
-<section class="mb-4 pb-1">
-	<p class="h3">
-		Projects &#8628;
-	</p>
+<details open class="mb-4 pb-1">
+	<summary class="h3">
+		Projects
+	</summary>
 	<ul class="list-unstyled ps-4"> 
 		{% for project in site.projects %}
 		<li>
@@ -80,12 +80,12 @@ title: Home
 		</li>
 		{% endfor %}
 	</ul>
-</section>
+</details>
 
-<section class="mb-4 pb-1">
-	<p class="h3">
-		Talks &#8628;
-	</p>
+<details open class="mb-4 pb-1">
+	<summary class="h3">
+		Talks
+	</summary>
 	<ul class="list-unstyled ps-4">
 		{% for talk in site.data.talks %}
 		<li class="mb-3">
@@ -99,4 +99,4 @@ title: Home
 		</li>
 		{% endfor %}
 	</ul>
-</section>
+</details>
