@@ -7,9 +7,37 @@ title: Home
 	<img src="/assets/images/satellite.png" class="rounded mx-auto d-block img-fluid" title="Our satellites are monitoring all transmissons." alt="A grayscale drawing of a communications satellite">
 </header>
 
-<section class="mb-4">
+<section class="mb-4 pb-1">
 	<p class="h3">
-		Go forth into the ether&hellip;
+		About &#8628;
+	</p>
+	<div class="ps-4">
+		<p>Hello. I'm <a href="https://www.linkedin.com/in/jeffsteward/" target="_blank">Jeff</a>. I make websites. I write software. I visualize data. I dream of fantastic futures, then attempt to build them.</p>
+		<p>I try to make these things fun, enjoyable, and thought-provoking. Sometimes I build physical interfaces to make interacting with data tangible and a bit more special.</p>
+		<p>Every once in a while I get to talk about my work at conferences and such.</p>
+	</div>
+</section>
+
+<section class="mb-4 pb-1">
+	<p class="h3">
+		Connect &#8628;
+	</p>			
+	<ul class="list-unstyled ps-4">
+		<li class="mb-3">
+			<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"><img class="icon me-3" src="/assets/images/linkedin.svg" alt="Link to LinkedIn account">linkedin.com/in/{{ site.linkedin_username }}</a>
+		</li>
+		<li class="mb-3">
+			<a href="https://github.com/{{ site.github_username }}"><img class="icon me-3" src="/assets/images/github-mark.svg" alt="Link to GitHub account">github.com/{{ site.github_username }}</a>
+		</li>
+		<li class="mb-3">
+			<a href="mailto:{{ site.email }}"><img class="icon me-3" src="/assets/images/envelope.svg" alt="Link to email address">{{ site.email }}</a>
+		</li>
+	</ul>
+</section>
+
+<section class="mb-4 pb-1">
+	<p class="h3">
+		Websites &#8628;
 	</p>
 	<ul class="list-unstyled ps-4">
 		<li>
@@ -36,9 +64,9 @@ title: Home
 	</ul>
 </section>
 
-<section class="mb-4">
+<section class="mb-4 pb-1">
 	<p class="h3">
-		Projects&hellip;
+		Projects &#8628;
 	</p>
 	<ul class="list-unstyled ps-4"> 
 		{% for project in site.projects %}
@@ -54,9 +82,9 @@ title: Home
 	</ul>
 </section>
 
-<section class="mb-4">
+<section class="mb-4 pb-1">
 	<p class="h3">
-		Talks&hellip;
+		Talks &#8628;
 	</p>
 	<ul class="list-unstyled ps-4">
 		{% for talk in site.data.talks %}
@@ -71,15 +99,4 @@ title: Home
 		</li>
 		{% endfor %}
 	</ul>
-</section>
-
-<section>
-	<p class="h3">
-		Connect&hellip;
-	</p>			
-	<p class="ps-4">
-		<a href="https://github.com/jeffsteward"><img class="icon me-2" src="/assets/images/github-mark.svg"></a>
-		<a href="https://www.linkedin.com/in/jeffsteward/"><img class="icon me-2" src="/assets/images/linkedin.svg"></a>
-		<a href="mailto:jeff@cardboardrobotics.com"><img class="icon me-2" src="/assets/images/envelope.svg"></a>
-	</p>
 </section>
