@@ -7,6 +7,8 @@ tags:
 dates: 2024-ongoing
 ---
 
+A [Pepper's Ghost](https://en.wikipedia.org/wiki/Pepper%27s_ghost) style viewer for exploring procedurally generated "universes".
+
 ## Sample Images
 
 ![](/assets/images/multiverse-demo-01.png){:class="img-fluid"}  
