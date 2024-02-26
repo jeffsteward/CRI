@@ -7,7 +7,7 @@ tags:
 dates: 2023-ongoing
 ---
 
-Custom drawings tools that mimic motifs I used to render in more traditional physical mediums. The tools are made with <a href="https://processing.org">Processing</a>.
+Custom digital drawing tools that mimic motifs I used to render in more traditional physical mediums. The tools are made with <a href="https://processing.org">Processing</a>.
 
 ## Puddles
 
