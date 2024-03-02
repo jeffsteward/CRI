@@ -1,5 +1,4 @@
-CRI
-===
+# CRI
 
 Just another website built with Bootstrap and Jekyll
 
