@@ -5,7 +5,8 @@
   event: "Fantastic Futures (AI4LAM) Annual Conference 2023"
   date: 2023-11-17
   duration: "10 minute read"
-
+  topics: ["ai", "computer vision", "interpretation"]
+  
 - title: "The HAM API: 10 Years and Counting"
   description:
   url: https://harvardartmuseums.org/article/1035/
@@ -13,6 +14,7 @@
   event: "MCN Annual Conference 2023"
   date: 2023-11-10
   duration: "9 minute read"
+  topics: ["apis", "strategy"]
 
 - title: "Elephants on Parade or: A Cavalcade of Discoveries from Five CV Systems"
   description:
@@ -21,6 +23,7 @@
   event: "AEOLIAN workshop 'Reimagining Industry / Academic / Cultural Heritage Partnerships in AI'"
   date: 2021-10-25
   duration: "34 minutes"
+  topics: ["ai", "computer vision", "systems comparison"]
 
 - title: "Gaming the Museum: Art Talk with Jeff Steward"
   description:
@@ -29,6 +32,7 @@
   event: "Harvard Art Museums Art Talks Live!"
   date: 2021-10-19
   duration: "34 minutes"
+  topics: ["games", "play", "remixing collections"]
 
 - title: "Dreaming about Collections Management Systems for the 21st Century"
   description:
@@ -37,6 +41,7 @@
   event: "Episode 2 of Balboa Park Online Collaborative's Dreaming of a New Collections Management System Webinar Series"
   date: 2021-01-20
   duration: "5 minute read"
+  topics: ["strategy"]
 
 - title: "Hacking Art with IIIF"
   description:
@@ -45,6 +50,7 @@
   event: "IIIF Showcase during the IIIF Annual Conference 2019"
   date: 2019-06-14
   duration: "8 minutes"
+  topics: ["iiif", "play", "remixing collections"]
 
 - title: "Fun and Games with Machine Processing and IIIF"
   description:
@@ -53,6 +59,7 @@
   event: "IIIF Showcase during the IIIF Annual Conference 2017"
   date: 2017-06-06
   duration: "12 minutes"
+  topics: ["computer vision", "games", "iiif", "play"]
 
 - title: "Exploratory Data Visualization of Collections"
   description:
@@ -61,3 +68,4 @@
   event: "sIGHTLines: obJECT"
   date: 2015-12-03
   duration: "15 minutes"
+  topics: ["data viz", "remixing collections"]

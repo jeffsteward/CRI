@@ -94,8 +94,13 @@ title: Home
 					<h4 class="media-heading">{{ talk.title }}</h4>
 				</div>
 			</a>
-			{{ talk.date | | date: "%B %d, %Y"}} during {{ talk.event }}<br/>
-			({{talk.url_type}}, {{talk.duration}})<br/>
+			<div class="lead mb-1">
+				{{ talk.date | | date: "%B %d, %Y"}} during {{ talk.event }}
+			</div>
+			<div class="text-muted">
+				Topics: {{ talk.topics | array_to_sentence_string }}<br/>
+				{{talk.url_type | capitalize}} ({{talk.duration}})
+			</div>
 		</li>
 		{% endfor %}
 	</ul>
