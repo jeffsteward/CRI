@@ -8,7 +8,9 @@ dates: 2007-2018
 published: true
 ---
 
-Before smartphones. Before the ubiquity of cameras. There was the Digital Automagic Audience Paticipatory Photo Booth.   
+Before smartphones. Before the ubiquity of cameras. There was the Digital Automagic Audience Participatory Photo Booth.   
+
+The booth was first built for a Halloween party in 2007. It was last used in 2018. In between, it ran more than 20 times at public and private events.  
 
 ## A History in Photos  
 
