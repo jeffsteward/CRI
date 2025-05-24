@@ -1,3 +1,12 @@
+- title: "The Stocahstic Challenge"
+  description:
+  url: https://youtu.be/4WjfEECtKGo?si=K_BabL2PuZZeD2ss
+  url_type: video
+  event: "Co-Opting AI: Museums hosted by NYU’s Institute for Public Knowledge, Sloane Lab, and the Digital Technology for Democracy Lab at the University of Virginia"
+  date: 2025-02-24
+  duration: "10 minutes"
+  topics: ["ai", "computer vision", "museums"]
+
 - title: "An AI, a Curator, and an Elephant Walk into a Museum…"
   description:
   url: https://harvardartmuseums.org/article/1036/
