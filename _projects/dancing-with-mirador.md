@@ -10,7 +10,7 @@ dates: 2019-06-25
 I hacked this together while learning about the actions dispatcher in <a href="https://projectmirador.org/">Mirador 3</a> during the Hands on Technical Workshop at the <a href="https://iiif.io/event/2019/goettingen/">2019 IIIF Conference</a> in Göttingen, Germany. The general thought was: "I want to make Mirador dance." 🤷
 
 <div id="mirador" style="width: 100%;height: 500px; position: relative;"></div>
-<script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+<script src="https://unpkg.com/mirador@^3/dist/mirador.min.js"></script>
 
 <script type="text/javascript">
     const defaultSettings = {
