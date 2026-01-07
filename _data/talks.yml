@@ -1,4 +1,22 @@
-- title: "The Stocahstic Challenge"
+- title: "Beyond the Single Voice: Co-Creating Knowledge with AI"
+  description: ""
+  url: https://www.youtube.com/watch?v=jKZmtHCabkc&t=6s
+  url_type: video
+  event: "Fantastic Futures (AI4LAM) Annual Conference 2025"
+  date: 2025-12-04
+  duration: "10 minutes"
+  topics: ["ai", "museums", "conjecture", "symbiosis", "cataloguing"]
+
+- title: "What We Learned From Machines Looking at Art"
+  description: "What happens when you ask machines to look at art? Ten years of research applying computer vision in an art museum can lead to some unusual discoveries. In this session, I will demonstrate a range of projects—from the game A(eye)-Spy to a story generator in which artworks fantasize about escape—that use the hallucinations, fever dreams, and false narratives of artificial intelligence to spark new ways of seeing and enliven conversations. These so-called “errors” reveal overlooked connections and unexpected interpretations, inviting a kind of dialogue between human and machine. Along the way, I’ll show how art offers a uniquely rich terrain for exploring subjectivity, ambiguity, and the creative potential of imperfect technologies. This session will examine how machine misperception can deepen human insight and offer a playful, provocative reframing of what it means to understand and experience art in a museum setting."
+  url:
+  url_type: 
+  event: "Serious Play Conference 2025"
+  date: 2025-08-13
+  duration: "30 minutes"
+  topics: ["ai", "museums", "narratives", "play", "games"]
+
+- title: "The Stochastic Challenge"
   description:
   url: https://youtu.be/4WjfEECtKGo?si=K_BabL2PuZZeD2ss
   url_type: video
